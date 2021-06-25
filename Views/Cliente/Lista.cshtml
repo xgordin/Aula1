@@ -1,0 +1,27 @@
+﻿@model List<Aula1.Models.Cliente>
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+@foreach (var cliente in Model)
+{
+    <li>
+        @Html.DisplayFor(model => cliente.Nome)
+    @Html.DisplayFor(model => cliente.SobreNome)
+    Cadastro em: @Html.DisplayFor(model => cliente.DataCadastro)
+</li>
+}     
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("li").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>    
+    }
+
+ 

@@ -1,0 +1,22 @@
+﻿@using Aula1.Models;
+
+@model Aula1.Models.Cliente
+
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h2>Index</h2>
+
+<div>
+
+    <p>@Model.Nome</p>
+    <p>@Model.SobreNome</p>
+    <p>@Model.DataCadastro</p>
+    <p>@Model.Id</p>
+</div>
+
+@{
+    var cliente = ViewData["Cliente"] as Cliente;
+    <p><b>@cliente.Nome</b></p>
+}
